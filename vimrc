@@ -11,23 +11,23 @@ set nomodeline
 set backspace=indent,eol,start
 
 " Now we set some defaults for the editor 
-set autoindent				" Always set autoindenting on
-set linebreak				" Don't wrap words by default
-set textwidth=0				" Don't wrap lines by default 
-set backupcopy=no			" Don't keep annoying backup files
-set viminfo='20,\"50		" Read/write a .viminfo file, don't store more than
-							" 50 lines of registers
-set history=50				" Keep 50 lines of command line history
-set ruler					" Show the cursor position all the time
-set nowrap					" Disable text wrapping
-set showcmd					" Show (partial) command in status line.
-set showmatch				" Show matching brackets.
-set ignorecase				" Do case insensitive matching
-set incsearch				" Incremental search
+set autoindent               " Always set autoindenting on
+set linebreak                " Don't wrap words by default
+set textwidth=0              " Don't wrap lines by default 
+set backupcopy=no            " Don't keep annoying backup files
+set viminfo='20,\"50         " Read/write a .viminfo file, don't store more than
+                             " 50 lines of registers
+set history=50               " Keep 50 lines of command line history
+set ruler                    " Show the cursor position all the time
+set nowrap                   " Disable text wrapping
+set showcmd                  " Show (partial) command in status line.
+set showmatch                " Show matching brackets.
+set ignorecase               " Do case insensitive matching
+set incsearch                " Incremental search
 
 " Use a column width of 4 for tabs, and always use tabs
 "  for indentation
-set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
 " Suffixes that get lower priority when doing tab completion for filenames.
 " These are files we are not likely to want to edit or read.
