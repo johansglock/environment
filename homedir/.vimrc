@@ -37,9 +37,6 @@ set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 " These are files we are not likely to want to edit or read.
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 
-" Make p in Visual mode replace the selected text with the "" register.
-vnoremap p <Esc>:let current_reg = @"<CR>gvdi<C-R>=current_reg<CR><Esc>
-
 " Enable syntax highlighing
 syntax on
 
@@ -67,3 +64,9 @@ endif
 " Show tabs and trailing whitespace as special characters
 set listchars=tab:→\ ,trail:·
 set list
+
+" Map CTRL-A to the beginning of the line
+map <C-a> <Home>
+
+" Map CTRL-E to the end of the line
+map <C-e> <End>
