@@ -25,8 +25,7 @@ set showmatch                " Show matching brackets.
 set ignorecase               " Do case insensitive matching
 set incsearch                " Incremental search
 
-" Use a column width of 4 for tabs, and always use tabs
-"  for indentation
+" Use a column width of 4 for tabs, and expand tabs into spaces
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
 " Suffixes that get lower priority when doing tab completion for filenames.
