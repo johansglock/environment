@@ -28,7 +28,7 @@ set showmatch               " Show matching brackets.
 set ignorecase              " Do case insensitive matching
 set incsearch               " Incremental search
 set pastetoggle=<F12>       " Use F12 to quickly switch paste mode
-set mouse=a                 " Enable the mouse for moving the cursor
+set mouse=v                 " Enable the mouse in visual mode
 
 " Use a column width of 4 for tabs, and expand tabs into spaces
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
