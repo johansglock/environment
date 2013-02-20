@@ -1,7 +1,9 @@
 [user]
-	email = <email>
-	name = <name>
+	email = johan@300.nl
+	name = Johan Schuijt
 [core]
 	editor = vim
 [color]
 	ui = true
+[push]
+	default = matching
