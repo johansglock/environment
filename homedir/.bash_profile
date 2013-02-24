@@ -2,6 +2,7 @@ export GOROOT=/usr/local/go
 export PATH=/usr/local/bin:$PATH
 export CLICOLOR=1
 export GREP_COLOR=auto
+export EDITOR=vim
 
 [[ -s ~/.bashrc ]] && source ~/.bashrc
 
