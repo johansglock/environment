@@ -3,6 +3,6 @@ Configuration
 
 My personal configuration files for software like vim.
 
-Install like (for example):
+Install by running:
 
-```ls -A ./path/to/environment/homedir/ | xargs -n 1 -I R ln -fs ./path/to/environment/homedir/R ~/R```
+``./install.sh``
