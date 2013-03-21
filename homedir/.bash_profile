@@ -1,7 +1,8 @@
 export GOROOT=/usr/local/go
 export PATH=/usr/local/bin:$PATH
 export CLICOLOR=1
-export GREP_COLOR=auto
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;35;40'
 export EDITOR=vim
 
 # turn on autocompletion for mac
