@@ -1,5 +1,5 @@
 export GOROOT=/usr/local/go
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;35;40'
