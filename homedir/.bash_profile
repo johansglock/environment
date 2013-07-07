@@ -1,3 +1,7 @@
+export CHARMAP="UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LANG=en_GB.UTF-8
+
 export GOROOT=/usr/local/go
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export CLICOLOR=1
