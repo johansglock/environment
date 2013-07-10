@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 DIR_BASE=$( cd $(dirname $0) ; pwd )
 DIR_SKELETON=$DIR_BASE/homedir
