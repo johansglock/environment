@@ -12,7 +12,7 @@ echo "Checking for unchanged Git options..."
 EMAIL_MATCHES=$(grep -c '<email>' ~/.gitconfig)
 if [ $EMAIL_MATCHES -gt 0 ]
 then
-    echo "Email: \c"
+    echo -n "Email: "
     read EMAIL
     sed -i '' -e "s/<email>/$EMAIL/g" $DIR_SKELETON/.gitconfig
 fi
@@ -20,7 +20,7 @@ fi
 NAME_MATCHES=$(grep -c '<name>' ~/.gitconfig)
 if [ $NAME_MATCHES -gt 0 ]
 then
-    echo "Name: \c"
+    echo -n "Name: "
     read NAME
     sed -i '' -e "s/<name>/$NAME/g" $DIR_SKELETON/.gitconfig
 fi
