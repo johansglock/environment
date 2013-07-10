@@ -15,6 +15,9 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# Store our OS
+PLATFORM=`uname`
+
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
@@ -43,12 +46,21 @@ xterm*|rxvt*)
     ;;
 esac
 
-# some more ls aliases
-alias less='less -r'
-alias ll='ls --color=auto -alF'
-alias la='ls --color=auto -A'
-alias ls='ls --color=auto'
-alias l='ls --color=auto -CF'
+# some more ls aliases (dependend on OS)
+if [ "$PLATFORM" == "Linux" ]; then
+    alias less='less -r'
+    alias ll='ls --color=auto -alF'
+    alias la='ls --color=auto -A'
+    alias ls='ls --color=auto'
+    alias l='ls --color=auto -CF'
+else
+    # For FreeBSD color output is handled by
+    # the env CLICOLOR
+    alias less='less -r'
+    alias ll='ls -alF'
+    alias la='ls -A'
+    alias l='ls -CF'
+fi
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
