@@ -3,7 +3,8 @@ export LC_ALL="en_US.UTF-8"
 export LANG=en_GB.UTF-8
 
 export GOROOT=/usr/local/go
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export GOPATH=/usr/local/go-packages
+export PATH=${GOPATH//://bin:}/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;35;40'
