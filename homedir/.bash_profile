@@ -26,5 +26,10 @@ if [ -x /usr/local/bin/brew ]; then
     fi
 fi
 
+# autocompletion for freebsd
+if [ -f /usr/local/etc/bash_completion ]; then
+    . /usr/local/etc/bash_completion
+fi
+
 # Include basrc after autocompleten, so we can test for certain functions
 [[ -s ~/.bashrc ]] && source ~/.bashrc
