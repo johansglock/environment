@@ -18,6 +18,7 @@ export LSCOLORS=Exfxcxdxbxegedabagacad
 
 # simple command for becoming root
 alias root="sudo -E bash"
+alias update-profile='TMP_PATH_UPDATE=`pwd`; cd $(dirname `readlink ~/.bashrc`); git pull; cd $TMP_PATH_UPDATE; source ~/.bash_profile;'
 
 # turn on autocompletion for mac
 if [ -x /usr/local/bin/brew ]; then

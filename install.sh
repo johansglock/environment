@@ -26,3 +26,5 @@ then
 fi
 echo "DONE"
 echo
+
+source ~/.bash_profile
