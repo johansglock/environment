@@ -1,0 +1,6 @@
+[submodule "homedir/.vim/bundle/puppet"]
+	path = homedir/.vim/bundle/puppet
+	url = git://github.com/rodjek/vim-puppet.git
+[submodule "homedir/.vim/bundle/tabular"]
+	path = homedir/.vim/bundle/tabular
+	url = git://github.com/godlygeek/tabular.git

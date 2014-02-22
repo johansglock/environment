@@ -24,7 +24,6 @@ set history=50              " Keep 50 lines of command line history
 set ruler                   " Show the cursor position all the time
 set nowrap                  " Disable text wrapping
 set showcmd                 " Show (partial) command in status line.
-set showmatch               " Show matching brackets.
 set ignorecase              " Do case insensitive matching
 set incsearch               " Incremental search
 set pastetoggle=<F12>       " Use F12 to quickly switch paste mode
@@ -64,6 +63,17 @@ endif
 " Show tabs and trailing whitespace as special characters
 set listchars=tab:→\ ,trail:·
 set list
+
+" Run pathogen (module loader)
+execute pathogen#infect()
+
+" Do automatic indenting based on filetypes (plugin specific indenting)
+filetype indent on
+
+" Remap Tab and shift-tab to (un)indent the visual selection
+"   (gv keeps visual mode in place)
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 " Map CTRL-A to the beginning of the line
 map <C-a> <Home>
