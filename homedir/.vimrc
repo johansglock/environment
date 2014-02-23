@@ -10,11 +10,11 @@ set nomodeline
 " Allow the use of backspace over all characters.
 set backspace=indent,eol,start
 
-" Now we set some defaults for the editor 
+" Now we set some defaults for the editor
 set autoindent              " Always set autoindenting on
 set shiftround              " Indent/outdent to nearest tabstop
 set linebreak               " Don't wrap words by default
-set textwidth=0             " Don't wrap lines by default 
+set textwidth=0             " Don't wrap lines by default
 set nobackup                " Don't keep backup files
 set noswapfile              " Don't keep filse like bla.swp
 set nowritebackup           " Don't keep files like bla~
@@ -31,6 +31,11 @@ set mouse=v                 " Enable the mouse in visual mode
 
 " Use a column width of 4 for tabs, and expand tabs into spaces
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+
+" We are using diffent pre/post hooks on action keys. For some like
+" InsertLeave or InsertEnter there is a key delay from <Esc>. We are disabling
+" the timeouts to prevent these delays from taking place.
+set timeout timeoutlen=0 ttimeoutlen=-1
 
 " Suffixes that get lower priority when doing tab completion for filenames.
 " These are files we are not likely to want to edit or read.
@@ -60,9 +65,24 @@ if has("multi_byte")
 
 endif
 
-" Show tabs and trailing whitespace as special characters
-set listchars=tab:→\ ,trail:·
+" Show tabs in a highlighted form
+set listchars=tab:>-
 set list
+
+" Default highligthing style of errors
+highlight ErrorMsg ctermbg=red guibg=red
+
+" Highlight the current line
+set cursorline
+highlight CursorLine cterm=NONE ctermbg=235 guibg=#262626
+
+" Mark trailing whitespace red except when we're in insert mode.
+"  (It's just freaking annoying to see a red flashing background
+"   all the time.)
+highlight default link TrailingWhitespace ErrorMsg
+match TrailingWhitespace /\s\+$/
+autocmd InsertEnter * hi link TrailingWhitespace NONE
+autocmd InsertLeave * hi link TrailingWhitespace ErrorMsg
 
 " Run pathogen (module loader)
 execute pathogen#infect()
