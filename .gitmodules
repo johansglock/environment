@@ -4,3 +4,6 @@
 [submodule "homedir/.vim/bundle/tabular"]
 	path = homedir/.vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
+[submodule "homedir/.vim/bundle/ctrlp"]
+	path = homedir/.vim/bundle/ctrlp
+	url = git://github.com/kien/ctrlp.vim
