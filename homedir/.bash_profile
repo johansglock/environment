@@ -27,9 +27,12 @@ if [ -x /usr/local/bin/brew ]; then
     fi
 fi
 
-# autocompletion for freebsd
-if [ -f /usr/local/etc/bash_completion ]; then
-    . /usr/local/etc/bash_completion
+# autocomplete freesbd 10
+if [ -f /usr/local/share/git-core/contrib/completion/git-completion.bash ]; then
+    . /usr/local/share/git-core/contrib/completion/git-completion.bash
+fi
+if [ -f /usr/local/share/git-core/contrib/completion/git-prompt.sh ]; then
+    . /usr/local/share/git-core/contrib/completion/git-prompt.sh
 fi
 
 # Include basrc after autocompleten, so we can test for certain functions
