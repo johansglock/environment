@@ -17,7 +17,7 @@ if [ $EMAIL_MATCHES -gt 0 ]
 then
     echo -n "Email: "
     read EMAIL
-    sed --in-place -e "s/<email>/$EMAIL/g" $DIR_SKELETON/.gitconfig
+    sed -i '' -e "s/<email>/$EMAIL/g" $DIR_SKELETON/.gitconfig
 fi
 
 NAME_MATCHES=$(grep -c '<name>' ~/.gitconfig)
@@ -25,7 +25,7 @@ if [ $NAME_MATCHES -gt 0 ]
 then
     echo -n "Name: "
     read NAME
-    sed --in-place -e "s/<name>/$NAME/g" $DIR_SKELETON/.gitconfig
+    sed -i '' -e "s/<name>/$NAME/g" $DIR_SKELETON/.gitconfig
 fi
 echo "DONE"
 echo
