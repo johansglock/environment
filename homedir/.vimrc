@@ -95,8 +95,10 @@ filetype indent on
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
-" Map CTRL-A to the beginning of the line
+" Remap Ctrl+A/E to Home/End
 map <C-a> <Home>
-
-" Map CTRL-E to the end of the line
 map <C-e> <End>
+
+" Do the same for insert mode
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
