@@ -35,7 +35,7 @@ export LSCOLORS=Exfxcxdxbxegedabagacad
 PLATFORM=`uname`
 
 # some more ls aliases (dependend on OS)
-if [ "$PLATFORM" "==" "Linux" ]; then
+if [ "$PLATFORM" = "Linux" ]; then
     alias less='less -r'
     alias ll='ls --color=auto -alF'
     alias la='ls --color=auto -A'
@@ -52,5 +52,5 @@ fi
 
 # Some handy commands
 alias root="sudo -E ${SHELL}"
-alias update-env='TMP_PATH_UPDATE=`pwd`; cd $(dirname `readlink ~/.bashrc`); git pull; git submodule init; git submodule update; cd $TMP_PATH_UPDATE;'
+alias update-env='TMP_PATH_UPDATE=`pwd`; cd $(dirname `readlink ~/.profile`); git pull; git submodule init; git submodule update; cd $TMP_PATH_UPDATE; (([ `basename $SHELL` = "bash" ] && source ~/.bash_profile) || ([ `basename $SHELL` = "zsh" ] && source ~/.zshrc))'
 
