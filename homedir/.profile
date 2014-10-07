@@ -52,5 +52,5 @@ fi
 
 # Some handy commands
 alias root="sudo -E ${SHELL}"
-alias update-env='TMP_PATH_UPDATE=`pwd`; cd $(dirname `readlink ~/.bashrc`); git pull; git submodule init; git submodule update; cd $TMP_PATH_UPDATE; source ~/.bash_profile;'
+alias update-env='TMP_PATH_UPDATE=`pwd`; cd $(dirname `readlink ~/.bashrc`); git pull; git submodule init; git submodule update; cd $TMP_PATH_UPDATE;'
 
