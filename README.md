@@ -6,7 +6,8 @@ My personal configuration files for software like vim.
 Install through this easy one-liner:
 
     git clone https://github.com/johansglock/environment.git ~/.shell-config \
-        && ~/.shell-config/install.sh && source ~/.bash_profile
+        && ~/.shell-config/install.sh && (([ `basename $SHELL` = 'bash' ] && source ~/.bash_profile) \
+        || ([ `basename $SHELL` = 'zsh' ] && source ~/.zshrc))
         
 Easy Commands
 ===========
