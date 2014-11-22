@@ -3,9 +3,9 @@
 export IDENTITY_A34FB68="true"
 
 # History control
-HISTFILE=~/.history
-HISTSIZE=1000
-SAVEHIST=2000
+export HISTFILE=~/.history
+export HISTSIZE=1000
+export SAVEHIST=2000
 
 # Locale
 export CHARMAP="UTF-8"
