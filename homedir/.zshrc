@@ -24,3 +24,7 @@ precmd () {
 
 # Set our prompt
 PS1="%B%F{green}%n@%m:%f%F{blue}%~%f%b\$vcs_info_msg_0_$ "
+
+# Mark a red background character for output that doesn't
+# end with newline as featured by PROMPT_SP (default on).
+PROMPT_EOL_MARK="%K{red} %k"
