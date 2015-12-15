@@ -31,12 +31,15 @@ export LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;
 # FreeBSD Specific: ls
 export LSCOLORS=Exfxcxdxbxegedabagacad
 
+# SlimerJS
+export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
+
 # Determine our OS
 PLATFORM=`uname`
 
+
 # some more ls aliases (dependend on OS)
 if [ "$PLATFORM" = "Linux" ]; then
-    alias less='less -r'
     alias ll='ls --color=auto -alF'
     alias la='ls --color=auto -A'
     alias ls='ls --color=auto'
@@ -44,10 +47,14 @@ if [ "$PLATFORM" = "Linux" ]; then
 else
     # For FreeBSD color output is handled by
     # the env CLICOLOR
-    alias less='less -r'
     alias ll='ls -alF'
     alias la='ls -A'
     alias l='ls -CF'
+
+    # Some usefull alias for FreeBSD ps and top
+    # arguments
+    alias ktop='top -aSCHIP'
+    alias wps='ps -o lwp -laxwwwSH'
 fi
 
 # Some handy commands
