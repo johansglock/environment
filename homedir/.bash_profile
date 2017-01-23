@@ -16,6 +16,11 @@ if [ -x /usr/local/bin/brew ]; then
     fi
 fi
 
+# Kubernetes autocompletion
+if [ -x /usr/local/bin/kubectl ]; then
+    source <(kubectl completion bash)
+fi
+
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 
