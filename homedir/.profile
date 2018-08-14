@@ -1,7 +1,3 @@
-# Ensure we're only executed once
-[ -n "$IDENTITY_A34FB68" ] && return
-export IDENTITY_A34FB68="true"
-
 # History control
 export HISTFILE=~/.history
 export HISTSIZE=1000
@@ -14,7 +10,7 @@ export LANG=en_GB.UTF-8
 
 # Golang
 export GOROOT=/usr/local/go
-export GOPATH=/usr/local/go-packages
+export GOPATH=~/go
 
 # Set PATH
 export PATH=~/.bin:${GOPATH//://bin:}/bin:/usr/local/bin:/usr/local/sbin:$PATH
@@ -31,8 +27,6 @@ export LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;
 # FreeBSD Specific: ls
 export LSCOLORS=Exfxcxdxbxegedabagacad
 
-# SlimerJS
-export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
 
 # Determine our OS
 PLATFORM=`uname`
