@@ -10,10 +10,11 @@ if [ -f /usr/local/share/git-core/contrib/completion/git-prompt.sh ]; then
 fi
 
 # Mac OSX Specific: Auto completion
-if [ -x /usr/local/bin/brew ]; then
-    if [ -f $(brew --prefix)/etc/bash_completion ]; then
-        . $(brew --prefix)/etc/bash_completion
-    fi
+if [ -x /opt/homebrew/bin/brew ]; then
+    for COMPLETION in "/opt/homebrew/etc/bash_completion.d/"*
+    do
+      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+    done
 fi
 
 # don't put duplicate lines or lines starting with space in the history.

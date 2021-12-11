@@ -15,6 +15,11 @@ export GOPATH=~/go
 # Set PATH
 export PATH=~/.bin:${GOPATH//://bin:}/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
+# Also set homebrew PATH etc
+if [ -x /opt/homebrew/bin/brew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # Set some different color options for commands
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
